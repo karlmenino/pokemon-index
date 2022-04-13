@@ -5,5 +5,6 @@ export interface Pokemon {
   type: string[],
   size: number,
   weight: number,
-  image:string
+  image:string,
+  selected: boolean
 }

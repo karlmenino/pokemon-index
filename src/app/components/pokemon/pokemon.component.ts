@@ -8,6 +8,8 @@ import { Pokemon } from '../pokemons/models/pokemon';
 })
 export class PokemonComponent implements OnInit {
 
+
+
   @Input()
   pokemon!: Pokemon;
   @Output()
@@ -18,7 +20,8 @@ export class PokemonComponent implements OnInit {
   }
 
   envoiePere() {
-    this.unEvenement.emit(this.pokemon.name);
+
+    this.unEvenement.emit(this.pokemon);
   }
 
 }
