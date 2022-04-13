@@ -1,0 +1,18 @@
+<p>pokemons works!</p>
+<div class="container">
+  <div class="row">
+    <button type="button" class="btn btn-primary" (click)="sortOrder()">ORDER</button>
+  </div>
+  <div class="row">
+    <p>Message du fils : {{messageDuFils}}</p>
+    <div>
+      <div class="row">
+
+        <div class="col-md-4 mt-3" *ngFor="let pokemon of pokemons | sortByPokedex: sortByPokedexValue">
+
+          <app-pokemon [pokemon]="pokemon" (unEvenement)="receptionMessage($event)"></app-pokemon>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
